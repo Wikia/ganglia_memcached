@@ -1,0 +1,16 @@
+ganglia_memcached.pl:
+
+script to record various ganglia metrics, with history
+
+
+installation:
+
+copy into a directory on you system, typically /usr/local/sbin/. 
+setup a cron job to run this every minute, to push metrics
+to ganglia.
+
+crontab example:
+
+#gmetric_memcache collection
+* * * * * /usr/local/bin/ganglia_memcached.pl >/dev/null 2>&1
+
